@@ -6,6 +6,7 @@ export type SortDirection = 'asc' | 'desc' | null;
 export interface GridColumn {
   field: string;
   header: string;
+  name?: string; // Added for compatibility
   width?: number;
   sortable?: boolean;
   filterable?: boolean;
@@ -16,12 +17,15 @@ export interface GridColumn {
 export interface GridSort {
   field: string;
   direction: SortDirection;
+  column?: string; // Added for compatibility
+  order?: 'asc' | 'desc'; // Added for compatibility
 }
 
 export interface GridFilter {
   field: string;
   value: string;
   operator: 'contains' | 'equals' | 'startsWith' | 'endsWith' | 'greaterThan' | 'lessThan';
+  column?: string; // Added for compatibility
 }
 
 export interface GridGroup {
@@ -47,6 +51,28 @@ export interface CellUpdate {
 export interface GridData {
   rows: Record<string, any>[];
   totalRows: number;
+}
+
+// New interface to match the specific JSON format shown
+export interface GridSnapshotJSON {
+  columns: Array<{
+    name: string;
+    width?: number;
+    field?: string;
+  }>;
+  data: Record<string, any>[];
+  sorting?: {
+    column: string;
+    order: 'asc' | 'desc';
+  };
+  filtering?: {
+    column: string;
+    value: string;
+    operator?: 'contains' | 'equals' | 'startsWith' | 'endsWith' | 'greaterThan' | 'lessThan';
+  };
+  grouping?: string;
+  cellStyles?: Record<string, CellStyle>;
+  updates?: Record<string, string>;
 }
 
 export interface GridSnapshot {
@@ -79,6 +105,16 @@ export interface GridResponse {
 
 export interface GridProps {
   snapshot: GridSnapshot;
+  height?: string | number;
+  width?: string | number;
+  pageSize?: number;
+  onRowClick?: (row: Record<string, any>) => void;
+  onCellClick?: (row: Record<string, any>, field: string) => void;
+}
+
+// New interface for our custom grid component that accepts GridSnapshotJSON
+export interface CustomGridProps {
+  snapshotUrl: string;
   height?: string | number;
   width?: string | number;
   pageSize?: number;

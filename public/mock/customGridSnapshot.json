@@ -1,0 +1,28 @@
+
+{
+  "columns": [
+    { "name": "ID", "width": 50 },
+    { "name": "Name", "width": 150 },
+    { "name": "Category", "width": 100 },
+    { "name": "Price", "width": 100 }
+  ],
+  "data": [
+    { "ID": 1, "Name": "Product A", "Category": "Electronics", "Price": "100" },
+    { "ID": 2, "Name": "Product B", "Category": "Clothing", "Price": "50" },
+    { "ID": 3, "Name": "Product C", "Category": "Electronics", "Price": "200" },
+    { "ID": 4, "Name": "Product D", "Category": "Home", "Price": "80" },
+    { "ID": 5, "Name": "Product E", "Category": "Clothing", "Price": "120" },
+    { "ID": 6, "Name": "Product F", "Category": "Electronics", "Price": "150" },
+    { "ID": 7, "Name": "Product G", "Category": "Home", "Price": "90" },
+    { "ID": 8, "Name": "Product H", "Category": "Clothing", "Price": "60" }
+  ],
+  "sorting": { "column": "Price", "order": "asc" },
+  "filtering": { "column": "Category", "value": "Electronics" },
+  "grouping": "Category",
+  "cellStyles": {
+    "Price": { "fontSize": "16px", "backgroundColor": "#f0f8ff" }
+  },
+  "updates": {
+    "Price": "red"
+  }
+}

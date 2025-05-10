@@ -1,8 +1,23 @@
 
 import React from 'react';
 import GridDemo from '@/components/GridDemo';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import DynamicGrid from '@/components/CustomGrid/DynamicGrid';
+import { toast } from '@/components/ui/sonner';
 
 const Index = () => {
+  // Handle row click for custom grid
+  const handleRowClick = (row: Record<string, any>) => {
+    if (row.isGroupHeader) return;
+    toast(`Row clicked: ${row.Name || row.name}`);
+  };
+  
+  // Handle cell click for custom grid
+  const handleCellClick = (row: Record<string, any>, field: string) => {
+    if (row.isGroupHeader) return;
+    toast(`Cell clicked: ${field} = ${row[field]}`);
+  };
+  
   return (
     <div className="min-h-screen bg-background">
       <header className="bg-white border-b py-6">
@@ -17,9 +32,35 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8">
         <div className="grid gap-8">
           <section>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <GridDemo />
-            </div>
+            <Tabs defaultValue="original">
+              <TabsList className="mb-4">
+                <TabsTrigger value="original">Original Grid</TabsTrigger>
+                <TabsTrigger value="dynamic">Dynamic JSON Grid</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="original" className="bg-white p-6 rounded-lg shadow-sm">
+                <GridDemo />
+              </TabsContent>
+              
+              <TabsContent value="dynamic" className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="space-y-4">
+                  <div>
+                    <h2 className="text-xl font-semibold text-primary mb-1">JSON-Driven Grid</h2>
+                    <p className="text-sm text-muted-foreground">
+                      Grid controlled entirely by GridSnapshot.json
+                    </p>
+                  </div>
+                  <div className="border rounded-md p-4">
+                    <DynamicGrid
+                      snapshotUrl="/mock/customGridSnapshot.json"
+                      height="600px"
+                      onRowClick={handleRowClick}
+                      onCellClick={handleCellClick}
+                    />
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
           </section>
           
           <section>
@@ -33,16 +74,16 @@ const Index = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="text-lg font-semibold text-primary mb-2">Cell Customization</h3>
+                <h3 className="text-lg font-semibold text-primary mb-2">JSON Configuration</h3>
                 <p className="text-muted-foreground">
-                  Control appearance with custom styles including fonts, colors, and highlighting.
+                  Grid behavior and styling are controlled through a simple JSON format that can be updated dynamically.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="text-lg font-semibold text-primary mb-2">Data Operations</h3>
+                <h3 className="text-lg font-semibold text-primary mb-2">Cell Customization</h3>
                 <p className="text-muted-foreground">
-                  Sort, filter, and group data dynamically with minimal UI lag.
+                  Control appearance with custom styles including fonts, colors, and highlighting based on JSON configuration.
                 </p>
               </div>
             </div>
