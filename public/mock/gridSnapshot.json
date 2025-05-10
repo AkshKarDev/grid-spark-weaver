@@ -1,0 +1,274 @@
+
+{
+  "columns": [
+    {
+      "field": "id",
+      "header": "ID",
+      "width": 80,
+      "sortable": true,
+      "filterable": true
+    },
+    {
+      "field": "name",
+      "header": "Name",
+      "width": 200,
+      "sortable": true,
+      "filterable": true,
+      "groupable": true
+    },
+    {
+      "field": "department",
+      "header": "Department",
+      "width": 150,
+      "sortable": true,
+      "filterable": true,
+      "groupable": true
+    },
+    {
+      "field": "title",
+      "header": "Title",
+      "width": 200,
+      "sortable": true,
+      "filterable": true,
+      "groupable": true
+    },
+    {
+      "field": "salary",
+      "header": "Salary",
+      "width": 120,
+      "sortable": true,
+      "filterable": true,
+      "cellStyle": {
+        "fontWeight": "500",
+        "color": "#333"
+      }
+    },
+    {
+      "field": "hireDate",
+      "header": "Hire Date",
+      "width": 120,
+      "sortable": true,
+      "filterable": true
+    },
+    {
+      "field": "status",
+      "header": "Status",
+      "width": 100,
+      "sortable": true,
+      "filterable": true,
+      "groupable": true
+    }
+  ],
+  "data": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "department": "Engineering",
+      "title": "Senior Developer",
+      "salary": 120000,
+      "hireDate": "2019-05-12",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Johnson",
+      "department": "Design",
+      "title": "UI/UX Designer",
+      "salary": 95000,
+      "hireDate": "2020-03-15",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "name": "Michael Brown",
+      "department": "Engineering",
+      "title": "Developer",
+      "salary": 85000,
+      "hireDate": "2021-01-10",
+      "status": "Active"
+    },
+    {
+      "id": 4,
+      "name": "Emily Davis",
+      "department": "Marketing",
+      "title": "Marketing Manager",
+      "salary": 110000,
+      "hireDate": "2018-11-20",
+      "status": "Active"
+    },
+    {
+      "id": 5,
+      "name": "Robert Wilson",
+      "department": "Engineering",
+      "title": "QA Engineer",
+      "salary": 90000,
+      "hireDate": "2020-07-05",
+      "status": "Active"
+    },
+    {
+      "id": 6,
+      "name": "Lisa Martinez",
+      "department": "Sales",
+      "title": "Sales Representative",
+      "salary": 85000,
+      "hireDate": "2021-03-22",
+      "status": "Inactive"
+    },
+    {
+      "id": 7,
+      "name": "David Anderson",
+      "department": "Engineering",
+      "title": "Senior Developer",
+      "salary": 125000,
+      "hireDate": "2017-08-15",
+      "status": "Active"
+    },
+    {
+      "id": 8,
+      "name": "Jennifer Taylor",
+      "department": "Design",
+      "title": "Graphic Designer",
+      "salary": 85000,
+      "hireDate": "2022-01-10",
+      "status": "Active"
+    },
+    {
+      "id": 9,
+      "name": "William Thomas",
+      "department": "Sales",
+      "title": "Sales Manager",
+      "salary": 115000,
+      "hireDate": "2019-04-18",
+      "status": "Active"
+    },
+    {
+      "id": 10,
+      "name": "Olivia White",
+      "department": "Marketing",
+      "title": "Content Strategist",
+      "salary": 92000,
+      "hireDate": "2020-09-30",
+      "status": "Active"
+    },
+    {
+      "id": 11,
+      "name": "James Harris",
+      "department": "Engineering",
+      "title": "DevOps Engineer",
+      "salary": 118000,
+      "hireDate": "2018-06-14",
+      "status": "Active"
+    },
+    {
+      "id": 12,
+      "name": "Sophia Clark",
+      "department": "Design",
+      "title": "Senior Designer",
+      "salary": 105000,
+      "hireDate": "2019-11-08",
+      "status": "Active"
+    },
+    {
+      "id": 13,
+      "name": "Daniel Lewis",
+      "department": "Engineering",
+      "title": "Frontend Developer",
+      "salary": 95000,
+      "hireDate": "2021-05-20",
+      "status": "Active"
+    },
+    {
+      "id": 14,
+      "name": "Emma Lee",
+      "department": "Marketing",
+      "title": "Digital Marketing Specialist",
+      "salary": 88000,
+      "hireDate": "2022-02-15",
+      "status": "Active"
+    },
+    {
+      "id": 15,
+      "name": "Joseph Walker",
+      "department": "Sales",
+      "title": "Sales Representative",
+      "salary": 82000,
+      "hireDate": "2021-08-10",
+      "status": "Active"
+    },
+    {
+      "id": 16,
+      "name": "Ava Allen",
+      "department": "Design",
+      "title": "UI Designer",
+      "salary": 90000,
+      "hireDate": "2020-12-05",
+      "status": "Active"
+    },
+    {
+      "id": 17,
+      "name": "Matthew Young",
+      "department": "Engineering",
+      "title": "Backend Developer",
+      "salary": 100000,
+      "hireDate": "2019-07-22",
+      "status": "Active"
+    },
+    {
+      "id": 18,
+      "name": "Isabella King",
+      "department": "Marketing",
+      "title": "Marketing Analyst",
+      "salary": 85000,
+      "hireDate": "2021-04-15",
+      "status": "Inactive"
+    },
+    {
+      "id": 19,
+      "name": "Christopher Wright",
+      "department": "Engineering",
+      "title": "Software Architect",
+      "salary": 135000,
+      "hireDate": "2017-05-10",
+      "status": "Active"
+    },
+    {
+      "id": 20,
+      "name": "Mia Scott",
+      "department": "Sales",
+      "title": "Senior Sales Representative",
+      "salary": 95000,
+      "hireDate": "2019-09-18",
+      "status": "Active"
+    }
+  ],
+  "initialSort": [
+    {
+      "field": "id",
+      "direction": "asc"
+    }
+  ],
+  "defaultCellStyle": {
+    "fontSize": "14px",
+    "height": "40px",
+    "backgroundColor": "#ffffff",
+    "color": "#1A1F2C"
+  },
+  "cellStyles": {
+    "4:salary": {
+      "backgroundColor": "#E5DEFF",
+      "fontWeight": "600"
+    },
+    "7:salary": {
+      "backgroundColor": "#E5DEFF",
+      "fontWeight": "600"
+    },
+    "11:salary": {
+      "backgroundColor": "#E5DEFF",
+      "fontWeight": "600"
+    },
+    "19:salary": {
+      "backgroundColor": "#E5DEFF",
+      "fontWeight": "600"
+    }
+  }
+}
